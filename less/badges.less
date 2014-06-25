@@ -35,6 +35,14 @@
   }
 }
 
+// Hover state, but only for links
+a.badge {
+  &:focus {
+    color: @badge-link-hover-color;
+    text-decoration: none;
+  }
+}
+
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }

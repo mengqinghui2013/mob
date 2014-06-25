@@ -1,22 +1,37 @@
 // Page Components
 
 .page{
-    height:100%;
-    width:100%;
+    min-height:100%;
+    min-width:100%;
     .box-model(vertical);
 }
 
-.header{
-    .box-flex(0);
+// Page header
+// -------------------------
+
+.page-header {
+    padding-bottom: ((@line-height-computed / 2) - 1);
+    margin: (@line-height-computed * 2) 0 @line-height-computed;
+    border-bottom: 1px solid @page-header-border-color;
     .title,h1{
-        -webkit-box-flex: 1;
-        box-flex: 1;
         padding:0;
         margin:0;
         font-size:18px;
-        text-align:center;
     }
 }
+
+// Page footer
+// -------------------------
+
+.page-footer{
+    font-size: @font-size-small;
+    text-align: center;
+    padding: 12px 0 24px;
+    color: @gray-lighter;
+}
+
+// Common bar styles
+// -------------------------
 
 .black-bar(){
     background-size:1px @bar-height;
@@ -32,6 +47,9 @@
     box-shadow:0 -1px 0 #fefcfc inset,0 0 4px rgba(0,0,0,.15);
     -webkit-shadow:0 -1px 0 #fefcfc inset,0 0 4px rgba(0,0,0,.15);
 }
+
+// Topbar
+// -------------------------
 
 .topbar{
     .box-flex(0);
@@ -73,13 +91,22 @@
     }
 }
 
+// Page content
+// -------------------------
+
 .content{ 
 	.box-flex(1);
 }
 
+// Page aside
+// -------------------------
+
 .aside{
 
 }
+
+// Page bottom bar
+// -------------------------
 
 .bottombar{
     height: @bar-height;
@@ -95,13 +122,6 @@
     &.bottombar-white{
         .white-bar();
     }
-}
-
-.footer{
-    font-size: @font-size-small;
-    text-align: center;
-    padding: 12px 0 24px;
-    color: @gray-lighter;
 }
 
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */
