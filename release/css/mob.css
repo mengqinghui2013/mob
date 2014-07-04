@@ -199,11 +199,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-<<<<<<< HEAD
-td,
-th {
-  padding: 0;
-}
 h1,
 h2,
 h3,
@@ -376,8 +371,6 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
-=======
->>>>>>> origin/dev
 .alert {
   text-align: center;
   margin: 0 auto;
@@ -502,18 +495,9 @@ ol ol {
   position: relative;
   top: -1px;
 }
-.btn-xs .badge {
-  top: 0;
-  padding: 1px 5px;
-}
 a.badge:focus {
   color: #ffffff;
   text-decoration: none;
-}
-a.list-group-item.active > .badge,
-.nav-pills > .active > a > .badge {
-  color: #428bca;
-  background-color: #ffffff;
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
@@ -1922,8 +1906,10 @@ body > * {
 .toolbar .nav .nav-item {
   height: 30px;
   line-height: 30px;
+  padding-bottom: 2px;
 }
 .toolbar .nav .nav-item.active {
+  padding-bottom: 0;
   border-bottom: 2px solid #f5682b;
 }
 .toolbar .subtoolbar {
@@ -2064,7 +2050,6 @@ body > * {
   position: absolute;
   font-size: 12px;
   line-height: 30px;
-<<<<<<< HEAD
   right: -50px;
   color: #434343;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#ebebeb));
@@ -2085,13 +2070,6 @@ body > * {
   height: 19px;
   margin: 6px 7px;
   z-index: 1111;
-=======
-  padding-bottom: 2px;
-}
-.toolbar .nav .nav-item.active {
-  padding-bottom: 0;
-  border-bottom: 2px solid #f5682b;
->>>>>>> origin/dev
 }
 .searchbar .icon-remove {
   display: none;
