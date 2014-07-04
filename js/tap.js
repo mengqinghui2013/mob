@@ -6,25 +6,79 @@
 // http://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers
 // http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
 
-;(function(){
-    //tap 点击延时绑定
-    //$(".tap").live('click', function(e){
-    //    e.preventDefault();
-    //    setTimeout(function(){
-            //callback      
-    //    },300);
-    //});
-    $(".tap")
-    .live('touchstart',function(){
-        $(this).data('background', $(this).css('background'));
-        $(this).css('background','#D9E9FF')
-    }).live('touchend', function(){
-        var background = $(this).data('background');
-        if(background){
-            $(this).css('background',background);
-        }else{
-            $(this).css('background','transparent')
-        }
-    })
-}($, window, document));
-/* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */
+
+(function() {
+	var DELAY_TIME = 15;
+	var HOVER_CLASS = 'hover';
+	var TIME_BEFORE_TOUCH_END = 400;
+
+
+	var id;
+	var $tgt, $lastTgt;
+	var startX, startY;
+	var diffX, diffY;
+	var startTime;
+	var isFinish = false;
+
+	var touchStart = function(e) {
+	startTime = now();
+	startX = e.touches[0].pageX;
+	startY = e.touches[0].pageY;
+
+	$tgt = $(this);
+
+	$lastTgt && $lastTgt.removeClass(HOVER_CLASS);
+	$lastTgt = $tgt;
+
+	id = setTimeout(function() {
+		$tgt.addClass(HOVER_CLASS);
+	},DELAY_TIME);
+
+	$tgt.on('touchmove', touchMove);
+
+	$tgt.on('touchend', touchEnd);
+
+	};
+
+	var touchMove = function(e) {
+		diffX = Math.abs(e.changedTouches[0].pageX - startX);
+		diffY = Math.abs(e.changedTouches[0].pageY - startY);
+		if (diffX > 10 || diffY > 10) {
+			finish();
+			$tgt.removeClass(HOVER_CLASS);
+			clearTimeout(id);
+		}
+	};
+
+	var touchEnd = function(e) {
+		diffX = Math.abs(e.changedTouches[0].pageX - startX);
+		diffY = Math.abs(e.changedTouches[0].pageY - startY);
+
+		finish();
+
+		$tgt.removeClass(HOVER_CLASS);
+
+		if (diffX < 10 && diffY < 10 && now() - startTime < TIME_BEFORE_TOUCH_END) {
+			setTimeout(function() {
+				$tgt.removeClass(HOVER_CLASS);//解决速度太快无法清除的问题
+			}, 600);
+		}
+	};
+
+	var finish = function() {
+		if (isFinish) return;
+		isFinish = true;
+		$tgt.off('touchmove').off('touchend');
+	};
+
+	var now = function() {
+		return +new Date();
+	};
+
+
+	$(function() {
+		$('.tap').on('touchstart', touchStart);
+	});
+
+})();
+
