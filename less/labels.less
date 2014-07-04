@@ -14,15 +14,8 @@
   vertical-align: baseline;
   border-radius: .25em;
 
-  // Empty labels collapse automatically (not available in IE8)
   &:empty {
     display: none;
-  }
-
-  // Quick fix for labels in buttons
-  .btn & {
-    position: relative;
-    top: -1px;
   }
 }
 
@@ -30,9 +23,6 @@
   background-color: @color;
   -webkit-tap-highlight-color: darken(@color, 10%);
 }
-
-// Colors
-// Contextual variations (linked labels get darker on :hover)
 
 .label-default {
   .label-variant(@label-default-bg);
