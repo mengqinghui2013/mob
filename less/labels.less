@@ -2,6 +2,13 @@
 // Labels
 // --------------------------------------------------
 
+
+
+.label-variant(@color) {
+  background-color: @color;
+  -webkit-tap-highlight-color: darken(@color, 10%);
+}
+
 .label {
   display: inline;
   padding: .2em .6em .3em;
@@ -17,11 +24,6 @@
   &:empty {
     display: none;
   }
-}
-
-.label-variant(@color) {
-  background-color: @color;
-  -webkit-tap-highlight-color: darken(@color, 10%);
 }
 
 .label-default {
