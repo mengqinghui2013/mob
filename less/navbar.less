@@ -1,44 +1,44 @@
-.navbar{
-    .box-flex(0);
-    .box-model(horizontal);
+.navbar {
+  .box-flex(0);
+  .box-model(horizontal);
 
-    height: @bar-height;
-    line-height: @bar-line-height;
+  height: @bar-height;
+  line-height: @bar-line-height;
 
-    a{
-        display: block;
-        text-align: center;
-        height: 100%;
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        box-flex: 1;
-        color:#eee;
-        text-decoration: none;
-        &.active{
-            color:white;
-        }
+  a {
+    display: block;
+    text-align: center;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    color: #eee;
+    text-decoration: none;
+    &.active {
+      color: white;
     }
-
-  &,&.navbar-black{
-    background-size:1px @bar-height;
-    background-image: @bar-black-background; 
-    background-repeat:repeat-x;
   }
 
-  &.navbar-white, &.navbar-invert{
-      border-top:1px solid #e0dede;
-      background-color: @bar-white-background;
-      background:linear-gradient(#fff, #f7f6f5);
-      background:-webkit-linear-gradient(#fff, #ccc);
-      a{
+  &, &.navbar-black {
+    background-size: 1px @bar-height;
+    background-image: @bar-black-background;
+    background-repeat: repeat-x;
+  }
+
+  &.navbar-white, &.navbar-invert {
+    border-top: 1px solid #e0dede;
+    background-color: @bar-white-background;
+    background: linear-gradient(#fff, #f7f6f5);
+    background: -webkit-linear-gradient(#fff, #ccc);
+    a {
+      color: black;
+      &.active {
         color: black;
-        &.active{
-            color: black;
-            background-color:#999;
-            background:linear-gradient(#999, #fff);
-            background:-webkit-linear-gradient(#aaa,#fff);
-        }
+        background-color: #999;
+        background: linear-gradient(#999, #fff);
+        background: -webkit-linear-gradient(#aaa, #fff);
       }
+    }
   }
 }
 

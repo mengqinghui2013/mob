@@ -3,69 +3,69 @@
 // Partly codes from bootstrap 3.0.2
 // --------------------------------------------------
 
-@active-background-color: rgb(51,193,203);
-@active-border-color: rgb(55,150,156);
-@inactive-background-color: rgb(247,247,247);
-@inactive-border-color: rgb(214,208,208);
+@active-background-color: rgb(51, 193, 203);
+@active-border-color: rgb(55, 150, 156);
+@inactive-background-color: rgb(247, 247, 247);
+@inactive-border-color: rgb(214, 208, 208);
 @font-size: 18px;
 
 // Base class
 // --------------------------------------------------
 
-.nav{
-    margin: 0;
-    padding: 0; // Override default ul/ol
-    list-style: none;
+.nav {
+  margin: 0;
+  padding: 0; // Override default ul/ol
+  list-style: none;
 
-    &.nav-pills{
-        // inactive
-        text-align:center;
-        .active{
-            background: @active-background-color;
-        }
-        li, .nav-tab{
-            float: left;
-        }
-        &.nav-justified{
-            width: 100%;
-            display: -webkit-box;
-            -webkit-box-orient: horizontal;
-            -webkit-box-align: stretch;
-
-            display: box;
-            box-orient: horizontal;
-            box-align: stretch;         
-
-            li, .nav-tab{
-                float: none;
-                -webkit-box-flex: 1;
-                box-flex: 1;
-            }
-        }
+  &.nav-pills {
+    // inactive
+    text-align: center;
+    .active {
+      background: @active-background-color;
     }
-
-    li, .nav-tab{
-        text-align: center;
-        font-size: @font-size;
-        a {
-            text-decoration: none;
-            //&,
-            //&:hover,
-            //&:focus {
-            //    color: @nav-pills-active-link-hover-color;
-            //    background-color: @nav-pills-active-link-hover-bg;
-            //}
-        }
+    li, .nav-tab {
+      float: left;
     }
-   // tab 分割线
-   //.nav-divider {
-   //    .nav-divider();
-   //}
+    &.nav-justified {
+      width: 100%;
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+      -webkit-box-align: stretch;
+
+      display: box;
+      box-orient: horizontal;
+      box-align: stretch;
+
+      li, .nav-tab {
+        float: none;
+        -webkit-box-flex: 1;
+        box-flex: 1;
+      }
+    }
+  }
+
+  li, .nav-tab {
+    text-align: center;
+    font-size: @font-size;
+    a {
+      text-decoration: none;
+      //&,
+      //&:hover,
+      //&:focus {
+      //    color: @nav-pills-active-link-hover-color;
+      //    background-color: @nav-pills-active-link-hover-bg;
+      //}
+    }
+  }
+  // tab 分割线
+  //.nav-divider {
+  //    .nav-divider();
+  //}
 }
 
 .tab-content .tab-pane {
-    display: none;
-    &.active {
-        display:block;
-    }
+  display: none;
+  &.active {
+    display: block;
+  }
 }

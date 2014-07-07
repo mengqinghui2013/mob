@@ -2,7 +2,6 @@
 // Mixins
 // --------------------------------------------------
 
-
 // Utilities
 // -------------------------
 
@@ -44,55 +43,58 @@
 }
 
 // Box Model
-.box-model(@orient){
-    display: -webkit-box;
-    -webkit-box-orient: @orient;
-    -webkit-box-align: stretch;
-    display: box;
-    box-orient: @orient;
-    box-align: stretch;
+.box-model(@orient) {
+  display: -webkit-box;
+  -webkit-box-orient: @orient;
+  -webkit-box-align: stretch;
+  display: box;
+  box-orient: @orient;
+  box-align: stretch;
 }
 
 //Box Model Flex
-.box-flex(@flex:0){
-    -webkit-box-flex: @flex;
-    box-flex: @flex;
+.box-flex(@flex:0) {
+  -webkit-box-flex: @flex;
+  box-flex: @flex;
 }
 
 // Border Radius
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
-          border-radius: @radius;
+  border-radius: @radius;
 }
 
 // Drop shadows
 .box-shadow(@shadow) {
   -webkit-box-shadow: @shadow;
-          box-shadow: @shadow;
+  box-shadow: @shadow;
 }
 
 // Transitions
 .transition(@transition) {
   -webkit-transition: @transition;
-          transition: @transition;
-}
-.transition-property(@transition-property) {
-  -webkit-transition-property: @transition-property;
-          transition-property: @transition-property;
-}
-.transition-delay(@transition-delay) {
-  -webkit-transition-delay: @transition-delay;
-          transition-delay: @transition-delay;
-}
-.transition-duration(@transition-duration) {
-  -webkit-transition-duration: @transition-duration;
-          transition-duration: @transition-duration;
-}
-.transition-transform(@transition) {
-  -webkit-transition: -webkit-transform @transition;
-          transition: transform @transition;
+  transition: @transition;
 }
 
+.transition-property(@transition-property) {
+  -webkit-transition-property: @transition-property;
+  transition-property: @transition-property;
+}
+
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+  transition-delay: @transition-delay;
+}
+
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+  transition-duration: @transition-duration;
+}
+
+.transition-transform(@transition) {
+  -webkit-transition: -webkit-transform @transition;
+  transition: transform @transition;
+}
 
 @black: #000;
 @white: #fff;

@@ -2,7 +2,6 @@
 // Typography
 // --------------------------------------------------
 
-
 // Headings
 // -------------------------
 
@@ -32,6 +31,7 @@ h3, .h3 {
     font-size: 65%;
   }
 }
+
 h4, .h4,
 h5, .h5,
 h6, .h6 {
@@ -44,13 +44,29 @@ h6, .h6 {
   }
 }
 
-h1, .h1 { font-size: @font-size-h1; }
-h2, .h2 { font-size: @font-size-h2; }
-h3, .h3 { font-size: @font-size-h3; }
-h4, .h4 { font-size: @font-size-h4; }
-h5, .h5 { font-size: @font-size-h5; }
-h6, .h6 { font-size: @font-size-h6; }
+h1, .h1 {
+  font-size: @font-size-h1;
+}
 
+h2, .h2 {
+  font-size: @font-size-h2;
+}
+
+h3, .h3 {
+  font-size: @font-size-h3;
+}
+
+h4, .h4 {
+  font-size: @font-size-h4;
+}
+
+h5, .h5 {
+  font-size: @font-size-h5;
+}
+
+h6, .h6 {
+  font-size: @font-size-h6;
+}
 
 // Body text
 // -------------------------
@@ -60,24 +76,39 @@ p {
 }
 
 // Alignment
-.text-left           { text-align: left; }
-.text-right          { text-align: right; }
-.text-center         { text-align: center; }
-.text-justify        { text-align: justify; }
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
 
 // Contextual colors
 .text-primary {
   color: @brand-primary;
 }
+
 .text-success {
   color: @state-success-text;
 }
+
 .text-info {
   color: @state-info-text;
 }
+
 .text-warning {
   color: @state-warning-text;
 }
+
 .text-danger {
   color: @state-danger-text;
 }
@@ -91,15 +122,19 @@ p {
   color: #fff;
   background-color: @brand-primary;
 }
+
 .bg-success {
   background-color: @state-success-bg;
 }
+
 .bg-info {
   background-color: @state-info-bg;
 }
+
 .bg-warning {
   background-color: @state-warning-bg;
 }
+
 .bg-danger {
   background-color: @state-danger-bg;
 }

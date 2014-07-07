@@ -1,10 +1,10 @@
-.searchbar{
-  padding:0;
-  margin:0;
-  height:34px;
-  width:100%;
+.searchbar {
+  padding: 0;
+  margin: 0;
+  height: 34px;
+  width: 100%;
 
-  .inner{
+  .inner {
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-align: stretch;
@@ -16,104 +16,104 @@
     display: box;
     box-orient: horizontal;
     box-align: stretch;
-    text-align:35px;
-    padding:6px 5px 0 5px;        
+    text-align: 35px;
+    padding: 6px 5px 0 5px;
   }
-  .search-query{
+  .search-query {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     box-flex: 1;
     outline: none;
-    border-radius:3px;
-    display:block;
-    margin:0;
-    border:1px solid #dcdcdc;
-    height:30px;
-    padding:0 31px;
-    -webkit-user-select:none;
-    -ms-user-select:none;
-    -moz-user-select:none;
+    border-radius: 3px;
+    display: block;
+    margin: 0;
+    border: 1px solid #dcdcdc;
+    height: 30px;
+    padding: 0 31px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); 
-    -ms-transition: width,left,right,margin-right 0.1s, 0.1s, 0.1s, 0.1s;
-    -moz-transition: width,left,right,margin-right 0.1s, 0.1s, 0.1s, 0.1s;
+    transform: translate3d(0, 0, 0);
+    -ms-transition: width, left, right, margin-right 0.1s, 0.1s, 0.1s, 0.1s;
+    -moz-transition: width, left, right, margin-right 0.1s, 0.1s, 0.1s, 0.1s;
   }
-  .search-cancel{
-    visibility:hidden;
-    height:32px;
-    width:45px;
-    padding:0;
-    margin:0;
-    position:absolute;
-    font-size:12px;
-    line-height:30px;
-    right:-50px;
-    color:#434343;
+  .search-cancel {
+    visibility: hidden;
+    height: 32px;
+    width: 45px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    font-size: 12px;
+    line-height: 30px;
+    right: -50px;
+    color: #434343;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#ebebeb));
     background-image: linear-gradient(to bottom, #f9f9f9, #ededed);
-    border:1px solid #c5c5c5;
-    border-radius:2px;
+    border: 1px solid #c5c5c5;
+    border-radius: 2px;
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); 
-    -ms-transition: width,left,right,margin-right 0.1s, 0.1s, 0.1s, 0.1s;
-    -moz-transition: width,left,right,margin-right 0.1s, 0.1s, 0.1s, 0.1s;
+    transform: translate3d(0, 0, 0);
+    -ms-transition: width, left, right, margin-right 0.1s, 0.1s, 0.1s, 0.1s;
+    -moz-transition: width, left, right, margin-right 0.1s, 0.1s, 0.1s, 0.1s;
   }
 
-  .icon-search{
-    position:absolute;
-    background:url("img/icon-search.png") no-repeat;
-    background-size:17px 19px;
-    background-position:center;
-    width:17px;
-    height:19px;
-    margin:6px 7px;
-    z-index:1111;
+  .icon-search {
+    position: absolute;
+    background: url("img/icon-search.png") no-repeat;
+    background-size: 17px 19px;
+    background-position: center;
+    width: 17px;
+    height: 19px;
+    margin: 6px 7px;
+    z-index: 1111;
   }
-  .icon-remove{
-    display:none;
-    opacity:0;
-    position : absolute;
-    margin:0;
-    background : url("img/icon-remove.png") no-repeat;
-    background-size:17px 18px;
-    background-position:center;
-    width:17px;
-    height:19px;
-    padding:6px 12px;
-    right:11px; /* 45 (right button width) + 5 (focus-right) + 6 (padding-right) - 12(icon padding)*/
-    z-index:1111;
+  .icon-remove {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    background: url("img/icon-remove.png") no-repeat;
+    background-size: 17px 18px;
+    background-position: center;
+    width: 17px;
+    height: 19px;
+    padding: 6px 12px;
+    right: 11px; /* 45 (right button width) + 5 (focus-right) + 6 (padding-right) - 12(icon padding)*/
+    z-index: 1111;
     -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0); 
-    -ms-transition: width,left,right,margin-right 0.1s, 0.1s, 0.1s, 0.1s;
-    -moz-transition: width,left,right,margin-right 0.1s, 0.1s, 0.1s, 0.1s;
-    -webkit-transition: width,left,right,margin-right 0.1s, 0.1s, 0.1s, 0.1s;
+    transform: translate3d(0, 0, 0);
+    -ms-transition: width, left, right, margin-right 0.1s, 0.1s, 0.1s, 0.1s;
+    -moz-transition: width, left, right, margin-right 0.1s, 0.1s, 0.1s, 0.1s;
+    -webkit-transition: width, left, right, margin-right 0.1s, 0.1s, 0.1s, 0.1s;
   }
-  &.active{
-    .popup{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      z-index:1000;
+  &.active {
+    .popup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
       background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ededed));
       background-image: linear-gradient(to bottom, #fff, #ededed);
       -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
-    .search-cancel{
-      right:5px;
+    .search-cancel {
+      right: 5px;
     }
-   .search-query{
-      margin-right:50px;
-      -webkit-user-select:auto;
-      -ms-user-select:auto;
-      -moz-user-select:auto;
+    .search-query {
+      margin-right: 50px;
+      -webkit-user-select: auto;
+      -ms-user-select: auto;
+      -moz-user-select: auto;
     }
-   .icon-remove{
-       display:block;
-      opacity:1;
-      right:49px; /* 45 (right button width) + 5 (focus-right) + 6 (padding-right) - 12(icon padding)*/
-      z-index:1111;
+    .icon-remove {
+      display: block;
+      opacity: 1;
+      right: 49px; /* 45 (right button width) + 5 (focus-right) + 6 (padding-right) - 12(icon padding)*/
+      z-index: 1111;
     }
   }
 }

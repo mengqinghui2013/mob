@@ -1,127 +1,127 @@
 // Page Components
 
-.page{
-    min-height:100%;
-    min-width:100%;
-    .box-model(vertical);
+.page {
+  min-height: 100%;
+  min-width: 100%;
+  .box-model(vertical);
 }
 
 // Page header
 // -------------------------
 
 .page-header {
-    padding-bottom: ((@line-height-computed / 2) - 1);
-    margin: (@line-height-computed * 2) 0 @line-height-computed;
-    border-bottom: 1px solid @page-header-border-color;
-    .title,h1{
-        padding:0;
-        margin:0;
-        font-size:18px;
-    }
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+  .title, h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+  }
 }
 
 // Page footer
 // -------------------------
 
-.page-footer{
-    font-size: @font-size-small;
-    text-align: center;
-    padding: 12px 0 24px;
-    color: @gray-lighter;
+.page-footer {
+  font-size: @font-size-small;
+  text-align: center;
+  padding: 12px 0 24px;
+  color: @gray-lighter;
 }
 
 // Common bar styles
 // -------------------------
 
-.black-bar(){
-    background-size:1px @bar-height;
-    background-image: @bar-black-background;
-    background-repeat:repeat-x;
+.black-bar() {
+  background-size: 1px @bar-height;
+  background-image: @bar-black-background;
+  background-repeat: repeat-x;
 }
 
 .white-bar() {
-    border-bottom:1px solid #e0dede;
-    background-color: @bar-white-background;
-    background:linear-gradient(#fff, #f7f6f5);
-    background:-webkit-linear-gradient(#fff, #f7f6f5);
-    box-shadow:0 -1px 0 #fefcfc inset,0 0 4px rgba(0,0,0,.15);
-    -webkit-shadow:0 -1px 0 #fefcfc inset,0 0 4px rgba(0,0,0,.15);
+  border-bottom: 1px solid #e0dede;
+  background-color: @bar-white-background;
+  background: linear-gradient(#fff, #f7f6f5);
+  background: -webkit-linear-gradient(#fff, #f7f6f5);
+  box-shadow: 0 -1px 0 #fefcfc inset, 0 0 4px rgba(0, 0, 0, .15);
+  -webkit-shadow: 0 -1px 0 #fefcfc inset, 0 0 4px rgba(0, 0, 0, .15);
 }
 
 // Topbar
 // -------------------------
 
-.topbar{
-    .box-flex(0);
-    .box-model(horizontal);
-    .box-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
-    height: @bar-height;
-    line-height: @bar-line-height;
-    font-size: 16px;
+.topbar {
+  .box-flex(0);
+  .box-model(horizontal);
+  .box-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  height: @bar-height;
+  line-height: @bar-line-height;
+  font-size: 16px;
+  text-align: center;
+  background-size: 1px 40px;
+  background-repeat: repeat-x;
+
+  border-bottom: 1px solid #e0dede;
+  /* &.black default */
+  .black-bar();
+  .title, h1 {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
     text-align: center;
-    background-size:1px 40px;
-    background-repeat:repeat-x;
+  }
 
-    border-bottom:1px solid #e0dede;
-    /* &.black default */
-    .black-bar();
-    .title,h1{
-        -webkit-box-flex: 1;
-        box-flex: 1;
-        padding:0;
-        margin:0;
-        font-size:18px;
-        text-align:center;
-    }
+  .btn {
+    -webkit-box-flex: 0;
+    box-flex: 0;
+  }
 
-    .btn{
-        -webkit-box-flex: 0;
-        box-flex: 0;
-    }
+  &.topbar-white {
+    .white-bar();
+  }
 
-    &.topbar-white{
-        .white-bar();
-    }
-
-    &.topbar-fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
+  &.topbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 // Page content
 // -------------------------
 
-.content{ 
-	.box-flex(1);
+.content {
+  .box-flex(1);
 }
 
 // Page aside
 // -------------------------
 
-.aside{
+.aside {
 
 }
 
 // Page bottom bar
 // -------------------------
 
-.bottombar{
-    height: @bar-height;
-    line-height: @bar-line-height;
-    &.bottombar-fixed {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    /* &.black default */
-    .black-bar();
-    &.bottombar-white{
-        .white-bar();
-    }
+.bottombar {
+  height: @bar-height;
+  line-height: @bar-line-height;
+  &.bottombar-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  /* &.black default */
+  .black-bar();
+  &.bottombar-white {
+    .white-bar();
+  }
 }
 
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */
