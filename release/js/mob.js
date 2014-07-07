@@ -353,78 +353,78 @@
 // http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
 
 
-(function() {
-	var DELAY_TIME = 15;
-	var HOVER_CLASS = 'hover';
-	var TIME_BEFORE_TOUCH_END = 400;
+(function () {
+    var DELAY_TIME = 15;
+    var HOVER_CLASS = 'hover';
+    var TIME_BEFORE_TOUCH_END = 400;
 
 
-	var id;
-	var $tgt, $lastTgt;
-	var startX, startY;
-	var diffX, diffY;
-	var startTime;
-	var isFinish = false;
+    var id;
+    var $tgt, $lastTgt;
+    var startX, startY;
+    var diffX, diffY;
+    var startTime;
+    var isFinish = false;
 
-	var touchStart = function(e) {
-	startTime = now();
-	startX = e.touches[0].pageX;
-	startY = e.touches[0].pageY;
+    var touchStart = function (e) {
+        startTime = now();
+        startX = e.touches[0].pageX;
+        startY = e.touches[0].pageY;
 
-	$tgt = $(this);
+        $tgt = $(this);
 
-	$lastTgt && $lastTgt.removeClass(HOVER_CLASS);
-	$lastTgt = $tgt;
+        $lastTgt && $lastTgt.removeClass(HOVER_CLASS);
+        $lastTgt = $tgt;
 
-	id = setTimeout(function() {
-		$tgt.addClass(HOVER_CLASS);
-	},DELAY_TIME);
+        id = setTimeout(function () {
+            $tgt.addClass(HOVER_CLASS);
+        }, DELAY_TIME);
 
-	$tgt.on('touchmove', touchMove);
+        $tgt.on('touchmove', touchMove);
 
-	$tgt.on('touchend', touchEnd);
+        $tgt.on('touchend', touchEnd);
 
-	};
+    };
 
-	var touchMove = function(e) {
-		diffX = Math.abs(e.changedTouches[0].pageX - startX);
-		diffY = Math.abs(e.changedTouches[0].pageY - startY);
-		if (diffX > 10 || diffY > 10) {
-			finish();
-			$tgt.removeClass(HOVER_CLASS);
-			clearTimeout(id);
-		}
-	};
+    var touchMove = function (e) {
+        diffX = Math.abs(e.changedTouches[0].pageX - startX);
+        diffY = Math.abs(e.changedTouches[0].pageY - startY);
+        if (diffX > 10 || diffY > 10) {
+            finish();
+            $tgt.removeClass(HOVER_CLASS);
+            clearTimeout(id);
+        }
+    };
 
-	var touchEnd = function(e) {
-		diffX = Math.abs(e.changedTouches[0].pageX - startX);
-		diffY = Math.abs(e.changedTouches[0].pageY - startY);
+    var touchEnd = function (e) {
+        diffX = Math.abs(e.changedTouches[0].pageX - startX);
+        diffY = Math.abs(e.changedTouches[0].pageY - startY);
 
-		finish();
+        finish();
 
-		$tgt.removeClass(HOVER_CLASS);
+        $tgt.removeClass(HOVER_CLASS);
 
-		if (diffX < 10 && diffY < 10 && now() - startTime < TIME_BEFORE_TOUCH_END) {
-			setTimeout(function() {
-				$tgt.removeClass(HOVER_CLASS);//解决速度太快无法清除的问题
-			}, 600);
-		}
-	};
+        if (diffX < 10 && diffY < 10 && now() - startTime < TIME_BEFORE_TOUCH_END) {
+            setTimeout(function () {
+                $tgt.removeClass(HOVER_CLASS);//解决速度太快无法清除的问题
+            }, 600);
+        }
+    };
 
-	var finish = function() {
-		if (isFinish) return;
-		isFinish = true;
-		$tgt.off('touchmove').off('touchend');
-	};
+    var finish = function () {
+        if (isFinish) return;
+        isFinish = true;
+        $tgt.off('touchmove').off('touchend');
+    };
 
-	var now = function() {
-		return +new Date();
-	};
+    var now = function () {
+        return +new Date();
+    };
 
 
-	$(function() {
-		$('.tap').on('touchstart', touchStart);
-	});
+    $(function () {
+        $('.tap').on('touchstart', touchStart);
+    });
 
 })();
 
