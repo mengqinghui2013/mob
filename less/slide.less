@@ -1,0 +1,47 @@
+//
+// 
+// --------------------------------------------------
+
+// 轮播图的样式
+// @author mengqinghui
+// 
+// -------------------------
+@import "mixins.less";
+@indicatorWidth:8px;
+@marginBottom:8px;
+.slider{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    .slider-group{
+        position: relative;
+        font-size: 0;
+        white-space: nowrap;
+        .transition(all 0s linear);
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        .slider-item{
+            float:left;
+            .box-center;//轮播图里面的图片有可能大小不一，因此需要绝对居中，但是这种布局方式导致一个问题，必须动态计算外部容器的宽度
+            height: 100%;
+        }
+    }
+    .slider-indicator{
+        position: absolute;
+        bottom: @marginBottom;
+        width: 100%;
+        text-align: center;
+        .mobindicator{
+            display: inline-block;
+            width: @indicatorWidth;
+            height: @indicatorWidth;
+            margin: 1px 6px;
+            cursor: pointer;
+            opacity:1;//这里不能设置半透明的，ios8.1原生浏览器有时不显示
+            background: @gray;
+            .border-radius(50%)
+            .box-shadow(0 0 1px 1px @gray-lighter);
+        }
+    }
+}
