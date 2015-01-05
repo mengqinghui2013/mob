@@ -27,8 +27,9 @@
                     "desc": ""
                 },
                 {
-                    "name": "slide",
-                    "desc": ""
+                    "name": "carousel",
+                    "desc": "",
+                    "less": "carousel"
                 }
             ]
         }
@@ -68,13 +69,10 @@
                     "desc": ""
                 },
                 {
-                    "name": "slide",
+                    "name": "carousel",
                     "desc": ""
                 }
             ]
-        },
-        "components": {
-
         }
 
     }
