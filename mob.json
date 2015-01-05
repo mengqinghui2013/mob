@@ -1,0 +1,81 @@
+ {
+
+    "js": {
+
+        "minum" : {
+            "desc": "",
+            "items": [
+                {
+                    "name": "core",
+                    "desc": ""
+                }
+            ]
+        },
+        "components": {
+            "desc": "",
+            "items": [
+                {
+                    "name": "aside",
+                    "desc": ""
+                },
+                {
+                    "name": "modal",
+                    "desc": ""
+                },
+                {
+                    "name": "scrollable",
+                    "desc": ""
+                },
+                {
+                    "name": "slide",
+                    "desc": ""
+                }
+            ]
+        }
+    },
+    "less": {
+        "minum": {
+            "desc": "",
+            "items": [
+                {
+                    "name": "variables",
+                    "desc": "变量less文件"
+                },
+                {
+                    "name": "mixins",
+                    "desc": ""
+                },
+                {
+                    "name": "normalize",
+                    "desc": ""
+                }
+            ]
+        },
+
+        "core": {
+            "desc": "",
+            "items": [
+                {
+                    "name": "code",
+                    "desc": "变量less文件"
+                },
+                {
+                    "name": "scaffolding",
+                    "desc": ""
+                },
+                {
+                    "name": "type",
+                    "desc": ""
+                },
+                {
+                    "name": "slide",
+                    "desc": ""
+                }
+            ]
+        },
+        "components": {
+
+        }
+
+    }
+ }

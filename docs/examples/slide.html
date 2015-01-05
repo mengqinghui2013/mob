@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html class="webapp">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>轮播图例子</title>
+    <link rel="stylesheet" type="text/css" href="../../release/css/mob.css">
+</head>
+<body>
+    <div id="main" class="page">
+        <nav class="toolbar topbar topbar-fixed">
+            <h1> 滚动例子 </h1>
+        </nav>
+        <section class="page-content pullable">
+            <div>
+                <div id="slider" class="slider slider-common">
+                    <div class="slider-group">
+                        <div class="slider-item">
+                            <a href="#"><img src="./images/pic01.jpg"></a>
+                        </div>
+                        <div class="slider-item">
+                            <a href="#"><img src="./images/pic02.jpg"></a>
+                        </div>
+                        <div class="slider-item">
+                            <a href="#"><img src="./images/pic03.jpg"></a>
+                        </div>
+                        <div class="slider-item">
+                            <a href="#"><img src="./images/pic04.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="slider-indicator">
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+</body>
+<script src="../js/zepto.js"></script>
+<script src="../../release/js/mob.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $('#slider').slide({
+            current:1
+        });
+    });
+</script>
+</html>

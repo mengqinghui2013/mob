@@ -10,20 +10,18 @@
 @indicatorWidth:8px;
 @marginBottom:8px;
 .slider{
-    position:relative;
-    width:100%;
-    overflow:hidden;
+    width: 100%;
+    z-index: 1001;
+    overflow: hidden;
     .slider-group{
         position: relative;
-        font-size: 0;
-        white-space: nowrap;
         .transition(all 0s linear);
-        height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        float: left;
         .slider-item{
             float:left;
-            .box-center;//轮播图里面的图片有可能大小不一，因此需要绝对居中，但是这种布局方式导致一个问题，必须动态计算外部容器的宽度
+            .box-center;
             height: 100%;
         }
     }
@@ -32,16 +30,23 @@
         bottom: @marginBottom;
         width: 100%;
         text-align: center;
-        .mobindicator{
+        .indicator{
             display: inline-block;
             width: @indicatorWidth;
             height: @indicatorWidth;
             margin: 1px 6px;
             cursor: pointer;
-            opacity:1;//这里不能设置半透明的，ios8.1原生浏览器有时不显示
+            opacity:1;
             background: @gray;
-            .border-radius(50%)
-            .box-shadow(0 0 1px 1px @gray-lighter);
+            .border-radius(50%);
+            .box-shadow(0 1px 1px @gray-lighter);
+        }
+        .indicator.indicator-selected{
+            vertical-align: -1px;
+            background-color: #FFF;
+            opacity: 1;
+            width: 9px;
+            height: 9px;
         }
     }
 }

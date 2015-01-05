@@ -1,0 +1,248 @@
+<html lang="zhCN"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    
+    <meta name="author" content="mob team">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://mobframe.github.io/mob/assets/themes/mob/css/normalize.css" rel="stylesheet">
+    <link href="http://mobframe.github.io/mob/assets/themes/mob/css/main.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="http://mobframe.github.io/mob/assets/themes/mob/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <!--<link href="http://mobframe.github.io/mob/css/highlight/monokai_sublime.css" rel="stylesheet" type="text/css" media="all">-->
+    <link href="http://mobframe.github.io/mob/assets/themes/mob/css/pygments/github.css" rel="stylesheet" type="text/css" media="all">
+    <link href="http://mobframe.github.io/mob/assets/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="http://mobframe.github.io/mob/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://mobframe.github.io/mob/assets/js/html5shiv.js"></script>
+    <script src="http://mobframe.github.io/mob/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="http://mobframe.github.io/mob/assets/js/jquery.min.js"></script>
+    <script src="http://mobframe.github.io/mob/assets/themes/mob/js/scrollspy.js"></script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+#wrap h2 {
+color: #E6820E;
+font-size: 1.4em;
+}
+#wrap .download-builder-header {
+border-bottom: 1px dotted #666666;
+padding: 10px 15px 15px;
+position: relative;
+}
+.component-group {
+clear: both;
+border: none;
+border-bottom: 1px dotted #666666;
+}
+.component-group > div {
+float: left;
+position: relative;
+padding: 3% 2% 2%;
+}
+.component-group-desc {
+width: 25.25%;
+}
+.component-group-list {
+width: 65.25%;
+}
+.component-group-list > div {
+clear: both;
+width: 100%;
+}
+.component-group-list > div input {
+margin: 1% 1% 1% 0;
+}
+.component-group-list > div label {
+margin: 1% 0%;
+width: 89%;
+}
+.component-group-list > div > * {
+float: left;
+}
+ span.component-title {
+font-size: 1.2em;
+line-height: 1.2em;
+font-weight: bold;
+margin: 0% 2% 0% 0;
+width: 25%;
+float: left;
+}
+ span.component-desc {
+font-size: 1.1em;
+line-height: 1.2em;
+width: 73%;
+float: left;
+}
+a:link,  a:visited {
+color: #1B75BB;
+text-decoration: none;
+}
+input[type=submit] {
+background: #1B75BB;
+border: 2px solid #1B75BB;
+color: #EEEEEE;
+cursor: pointer;
+font-size: 1.5em;
+font-weight: bold;
+margin:10px 20px;
+padding: 0.4em 0;
+text-align: center;
+width: 200px;
+}
+</style></head>
+
+<body>
+<header class="navbar">
+    <section>
+        <a href="/index.html">
+            <div class="logo">
+                MOB - 移动前端UI框架
+            </div>
+        </a>
+        <div class="nav-items">
+            <a href="http://mobframe.github.io/mob/index.html" target="_blank"><div class="nav-item">首页</div></a>
+            <a href="http://mobframe.github.io/mob/docs/beginning/index.html" target="_blank"><div class="nav-item">文档</div></a>
+            <a href="#"><div class="nav-item">定制</div></a>
+            <a href="#"><div class="nav-item active">下载</div></a>
+        </div>
+    </section>
+</header>
+
+<div id="wrap">
+    <div>
+        快捷下载：<a href="" class="download-link">开发版</a><a href="" class="download-link">生产版</a>
+    </div>
+    <div class="download-builder-header">
+        <h2>版本</h2>
+        <div class="field-pair">
+            <label class="clearfix">
+                <input type="radio" id="version-1.11.2" value="1.11.2" name="version" checked="checked" data-no-theme-folder="true">
+                <span class="version-title">1.11.2</span>
+                <span class="version-label">(Stable, for jQuery1.6+)</span>
+            </label>
+        </div>
+    </div>
+    <div class="">
+        <div>
+            <div class="download-builder-header">
+                <h2>JS组件</h2><label class="toggleAll"><input type="checkbox" class="">全/反选</label>
+            </div>
+            <div class="component-group clearfix">
+                <div class="component-group-desc">
+                    <h3>UI Core</h3><label class="toggle"><input type="checkbox" checked>全/反选</label>
+                    <p></p>
+                </div>
+                <div class="component-group-list">
+                    <div class="clearfix">
+                        <input id="core" type="checkbox" checked="" name="core" class="" data-dependencies="">
+                        <label for="core" title="The core of jQuery UI, required for all interactions and widgets." class="clearfix">
+                            <span class="component-title">Core</span>
+                            <span class="component-desc">The core of jQuery UI, required for all interactions and widgets.</span>
+                        </label>
+                    </div>
+                
+                    <div class="clearfix">
+                        <input id="widget" type="checkbox" checked="" name="widget" class="" data-dependencies="">
+                        <label for="widget" title="Provides a factory for creating stateful widgets with a common API." class="clearfix">
+                            <span class="component-title">Widget</span>
+                            <span class="component-desc">Provides a factory for creating stateful widgets with a common API.</span>
+                        </label>
+                    </div>
+                
+                    <div class="clearfix">
+                        <input id="mouse" type="checkbox" checked="" name="mouse" class="" data-dependencies="core,widget">
+                        <label for="mouse" title="Abstracts mouse-based interactions to assist in creating certain widgets." class="clearfix">
+                            <span class="component-title">Mouse</span>
+                            <span class="component-desc">Abstracts mouse-based interactions to assist in creating certain widgets.</span>
+                        </label>
+                    </div>
+                
+                    <div class="clearfix">
+                        <input id="position" type="checkbox" checked="" name="position" class="" data-dependencies="">
+                        <label for="position" title="Positions elements relative to other elements." class="clearfix">
+                            <span class="component-title">Position</span>
+                            <span class="component-desc">Positions elements relative to other elements.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="download-builder-header">
+                <h2>CSS组件</h2><label class="toggleAll"><input type="checkbox" class="">全/反选</label>
+            </div>
+            <div class="component-group clearfix">
+                <div class="component-group-desc">
+                    <h3>UI Core</h3><label class="toggle"><input type="checkbox" checked>全/反选</label>
+                    <p></p>
+                </div>
+                <div class="component-group-list">
+                    <div class="clearfix">
+                        <input id="core" type="checkbox" checked="" name="core" class="" data-dependencies="">
+                        <label for="core" title="The core of jQuery UI, required for all interactions and widgets." class="clearfix">
+                            <span class="component-title">Core</span>
+                            <span class="component-desc">The core of jQuery UI, required for all interactions and widgets.</span>
+                        </label>
+                    </div>
+                
+                    <div class="clearfix">
+                        <input id="widget" type="checkbox" checked="" name="widget" class="" data-dependencies="">
+                        <label for="widget" title="Provides a factory for creating stateful widgets with a common API." class="clearfix">
+                            <span class="component-title">Widget</span>
+                            <span class="component-desc">Provides a factory for creating stateful widgets with a common API.</span>
+                        </label>
+                    </div>
+                
+                    <div class="clearfix">
+                        <input id="mouse" type="checkbox" checked="" name="mouse" class="" data-dependencies="core,widget">
+                        <label for="mouse" title="Abstracts mouse-based interactions to assist in creating certain widgets." class="clearfix">
+                            <span class="component-title">Mouse</span>
+                            <span class="component-desc">Abstracts mouse-based interactions to assist in creating certain widgets.</span>
+                        </label>
+                    </div>
+                
+                    <div class="clearfix">
+                        <input id="position" type="checkbox" checked="" name="position" class="" data-dependencies="">
+                        <label for="position" title="Positions elements relative to other elements." class="clearfix">
+                            <span class="component-title">Position</span>
+                            <span class="component-desc">Positions elements relative to other elements.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="submit" class="" value="下载">
+
+
+
+  <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4206d67a3ea708c0d2a9354c8d88525f' type='text/javascript'%3E%3C/script%3E"));
+</script><script src=" http://hm.baidu.com/h.js?4206d67a3ea708c0d2a9354c8d88525f" type="text/javascript"></script>
+
+
+
+
+
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://mobframe.github.io/mob/assets/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript">
+    
+</script>
+
+
+
+</body></html>

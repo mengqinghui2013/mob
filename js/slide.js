@@ -233,7 +233,6 @@
       this.x = x;
       y = y || 0;
       this.y = y;
-
       this.slider.style[transform] = 'translate(' + x + 'px,' + y + 'px)' + translateZ;
     },
 

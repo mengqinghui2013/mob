@@ -33,20 +33,24 @@ module.exports = function(grunt) {
         },
         uglify: {   // compress js files.
             options: {
-                report: 'min'
+                report: 'min',
+                banner: '<%= banner %>'
             },
             mobjs: {
-                src: '<%= concat.mob.dest %>',
+                src: 'release/js/<%= pkg.name %>.js',
                 dest: 'release/js/<%= pkg.name %>.min.js'
             }
         },
-        concat: {   // concat files into single one.
+       /* concat: {   // concat files into single one.
             mob:{
                 src: [
                     'js/*.js'
                 ],
                 dest: 'release/js/<%= pkg.name %>.js'
             }
+        },*/
+        concatless: {
+            dest: "less/concat.less",
         },
         less: {// compile less codes into css codes.
             compileCore: {
@@ -57,8 +61,9 @@ module.exports = function(grunt) {
                   sourceMapURL: '<%= pkg.name %>.css.map',
                   sourceMapFilename: 'release/css/<%= pkg.name %>.css.map'
                 },
+
                 files: {
-                  'release/css/<%= pkg.name %>.css': 'less/mob.less'
+                  'release/css/<%= pkg.name %>.css': '<%= concatless.dest %>'
                 }
             },
         },
@@ -71,9 +76,14 @@ module.exports = function(grunt) {
                 selectorsMergeMode: 'ie8'
                 },
             src: [
-                'release/css/mob.css',
+                    'release/css/<%= pkg.name %>.css',
                 ],
-            dest: 'release/css/mob.min.css'
+            dest: 'release/css/<%= pkg.name %>.min.css'
+            }
+        },
+        buildjs: {
+            all: {
+                dest: "release/js/<%= pkg.name %>.js"
             }
         },
         watch: {  // watch任务，实时监听文件的变化，并进行编译
@@ -106,7 +116,7 @@ module.exports = function(grunt) {
                 path: 'http://localhost:<%= connect.webserver.options.port %>/docs/examples'
             }
         },
-        connect: { // start httpserver to view examples and docs through browser.
+/*        connect: { // start httpserver to view examples and docs through browser.
             webserver: {
                 options: {
                     keepalive: true,
@@ -114,7 +124,7 @@ module.exports = function(grunt) {
                     base: '.'
                 }
             }
-        },
+        },*/
         copy: {
             font: {
                 expand: true,
@@ -146,14 +156,19 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
     // JS distribution task.
-    grunt.registerTask('dist-js', ['concat', 'uglify']);
+
+
+
+    grunt.loadTasks( "build/task" );
+
+     // JS distribution task.
     // CSS distribution task.
-    grunt.registerTask('dist-css', ['less', 'cssmin']);
-    grunt.registerTask('dist-font', ['copy:font']);
-    grunt.registerTask('build', ['dist-js', 'dist-css', 'dist-font', 'copy:docs']);
-	grunt.registerTask('default', ['build']);
-    grunt.registerTask('dev', 'Start a developing envirment', [
-        'concurrent:dev'
-    ]); 
+    grunt.registerTask('distfont', ['copy:font']);
+
+
+    grunt.registerTask('dev', ['distjs', 'distless', 'distfont', 'copy:docs']);
+    
+    
+	grunt.registerTask('default', ['dev'] );
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */

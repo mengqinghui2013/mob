@@ -29,3 +29,7 @@ mob_consult/
 node_modules/
 config.less
 .ideas
+webpack.config.js
+test/test.html
+test/math.js
+test/mob.js
